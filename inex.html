@@ -3,45 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+          integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="icon" href="logo.png">
-    <title>Spotify</title>
+    <title>Spotify Clone</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="main">
-        <div class="sidebar">
-            <div class="nav">
-                <div class="nav-option" style="opacity: 1;">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <nav class="nav">
+                <div class="nav-option active" aria-label="Home">
                     <i class="fa-solid fa-house"></i>
-                    <a href="#">Home</a>
+                    <a href="#" class="nav-link">Home</a>
                 </div>
-                <div class="nav-option">
+                <div class="nav-option" aria-label="Search">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <a href="#">Search</a>
+                    <a href="#" class="nav-link">Search</a>
                 </div>
-            </div>
-            <div class="library">
-                <div class="options">
-                    <div class="lib-option nav-option">
-                        <img src="library_icon.png">
-                        <a href="#">Your Library</a>
-                    </div>
-                    <div class="icons">
-                        <i class="fa-solid fa-plus"></i>
-                        <i class="fa-sharp-duotone fa-solid fa-arrow-right"></i>
-                    </div>
-                  <div class="boxes"></div>
-                </div>
-            </div>
+            </nav>
 
-        </div>
-            
-        <div class="main_containt">main containt</div>
-        <div class="music_player">music player</div>
+            <!-- Library Section -->
+            <section class="library">
+                <div class="library-header">
+                    <div class="lib-option nav-option">
+                        <img src="library_icon.png" alt="Library Icon" class="library-icon">
+                        <a href="#" class="nav-link">Your Library</a>
+                    </div>
+                    <div class="library-actions">
+                        <button class="btn">
+                            <i class="fa-solid fa-plus" aria-label="Add New"></i>
+                        </button>
+                        <button class="btn">
+                            <i class="fa-solid fa-arrow-right" aria-label="More Options"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="library-boxes"></div>
+            </section>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <h1>Welcome to Spotify Clone</h1>
+            <p>This is where the main content will go.</p>
+        </main>
+
+        <!-- Music Player -->
+        <footer class="music-player">
+            <p>Music Player Section</p>
+        </footer>
     </div>
 </body>
 </html>
