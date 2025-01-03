@@ -1,103 +1,179 @@
-body{
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
+/* General Styles */
+body {
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
-  background-color: black;
+  background-color: #121212;
   color: white;
-  overflow: auto;
-  
 }
 
-.main{
+.main {
   display: flex;
   height: 100vh;
-  padding: 0.5rem;
 }
 
-.sidebar{
-    background-color: rgb(0, 0, 0);
-    width: 300px;
-    border-radius: 1rem;
+/* Sidebar Styles */
+.sidebar {
+  background: linear-gradient(135deg, #282828, #121212);
+  width: 300px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 1rem;
 }
 
-.main_containt{
-   background-color: #461b1b;
-   flex: 1;
-   border-radius: 1rem;
-   
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.music_player{
-    background-color: black;
-    position: fixed;
-    bottom: 0;
-    height: 72px;
-    width: 100%;
+.nav-option {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  transition: background 0.3s ease;
+  opacity: 0.8;
 }
 
-a{
-    text-decoration: none;
-    color: white;
+.nav-option.active,
+.nav-option:hover {
+  background-color: #1db954;
+  opacity: 1;
 }
-
-.nav{
-    background-color: #121212;
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100px;
-    padding: 0.5rem 0.75rem;
-}
-
-.nav-option{
-    line-height: 2.5rem;
-    opacity: 0.7;
-    padding: 0.5rem 0.75rem;
-}
-.nav-option:hover{
-    line-height: 2.5rem;
-    opacity: 1;
-}
-
 
 .nav-option i {
-    font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
 .nav-option a {
-    font-size: 1rem;
-    margin-left: 1rem;
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
 }
 
-.library{
-    background-color: #121212;
-    border-radius: 1rem;
-    height: 100%;
-    margin-top: 0.5rem;
-    padding: 0.5rem 0.75rem;
-    
+/* Library Section */
+.library {
+  margin-top: 1rem;
+  background-color: #181818;
+  padding: 1rem;
+  border-radius: 1rem;
 }
 
-.options{
-    display: flex;
-    justify-content: space-between;
-    align-items: center
+.library-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
 }
 
-.lib-option img {
-    height: 1.25rem;
-    width: 1.25rem;
-    
+.library-boxes {
+  color: #ccc;
+  font-size: 0.9rem;
 }
-.icons{
-    font-size: 1.25rem;
-    
-    margin-right: 1rem;
-    display: flex;
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  background: linear-gradient(135deg, #1e1e1e, #121212);
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
-.icons i {
-    opacity: 0.7;
-    margin-right: 1rem;
-    margin-left: 0.5rem;
+
+.main-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #1db954;
+}
+
+.main-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #ccc;
+}
+
+.play-button {
+  background-color: #1db954;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.play-button:hover {
+  background-color: #1aa34a;
+}
+
+/* Music Player */
+.music-player {
+  background: linear-gradient(135deg, #282828, #121212);
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 2rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top: 2px solid #1db954;
+}
+
+.player-controls i,
+.player-volume i {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.player-controls i:hover,
+.player-volume i:hover {
+  color: #1db954;
+}
+
+.player-progress {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.progress-bar {
+  background-color: #444;
+  width: 300px;
+  height: 5px;
+  border-radius: 2.5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress {
+  background-color: #1db954;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+}
+
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
 }
