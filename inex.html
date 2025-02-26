@@ -25,20 +25,24 @@
       <!-- Sidebar -->
       <aside class="sidebar">
         <nav class="nav">
-          <div class="nav-option active" aria-label="Home">
-            <i class="fa-solid fa-house"></i>
-            <a href="#" class="nav-link">Home</a>
-          </div>
-          <div class="nav-option" aria-label="Search">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <a href="#" class="nav-link">Search</a>
-          </div>
+          <ul class="nav-list">
+            <li class="nav-item active">
+              <a href="#" class="nav-link" aria-label="Home">
+                <i class="fa-solid fa-house" aria-hidden="true"></i> Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" aria-label="Search">
+                <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i> Search
+              </a>
+            </li>
+          </ul>
         </nav>
-
+    
         <!-- Library Section -->
         <section class="library">
           <div class="library-header">
-            <div class="lib-option nav-option">
+            <div class="lib-option">
               <img
                 src="library_icon.png"
                 alt="Library Icon"
@@ -47,14 +51,11 @@
               <a href="#" class="nav-link">Your Library</a>
             </div>
             <div class="library-actions">
-              <button class="btn">
-                <i class="fa-solid fa-plus" aria-label="Add New"></i>
+              <button class="btn" aria-label="Add New">
+                <i class="fa-solid fa-plus" aria-hidden="true"></i>
               </button>
-              <button class="btn">
-                <i
-                  class="fa-solid fa-arrow-right"
-                  aria-label="More Options"
-                ></i>
+              <button class="btn" aria-label="More Options">
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
               </button>
             </div>
           </div>
@@ -63,6 +64,8 @@
           </div>
         </section>
       </aside>
+    </div>
+    
 
       <!-- Main Content -->
       <main class="main-content">
